@@ -1,6 +1,9 @@
 Set
 Get
-Init
+Init 0(n)T
 Traverse
 Insert
 Delete
+
+
+Array is back to back memory.

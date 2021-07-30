@@ -1,0 +1,34 @@
+Linked list is non contiguous memory.
+
+HEAD -> Fist Location Address
+TAIL ->
+
+Operations
+init
+set
+get
+Traverse
+insert
+Delete
+
+
+1. Set
+O(1)T if tail is set
+worst case O(n)T
+
+
+2. Get
+worst case O(n)T
+
+3. Traverse
+worst case O(n)T
+
+4. Insert
+Best case O(1)T //First case
+worst case O(n)T
+
+5.Delete
+worst case O(n)T
+
+6. init
+O(1)

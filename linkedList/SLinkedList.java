@@ -33,12 +33,38 @@ public void show(){
         }
 }
 
+public void remove(int data){
+        Node temp = head;
+        Node prev = head;
+        if(temp !=null && temp.data == data) {
+                head = temp.next;
+                return;
+        }
+        while(temp!= null && temp.data != data) {
+                prev = temp;
+                temp = temp.next;
+        }
+        if(temp == null) {
+                System.out.println("List is empty");
+                return;
+        }
+        if(temp == tail) {
+                tail = prev;
+                tail.next = null;
+                return;
+        }
+        prev.next = temp.next;
+
+}
+
 public static void main(String[] args){
         SLinkedList sll = new SLinkedList();
         sll.show();
         sll.addElement(10);
         sll.addElement(7);
         sll.addElement(40);
+        sll.show();
+        sll.remove(10);
         sll.show();
 
 }

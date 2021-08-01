@@ -1,4 +1,6 @@
-public class SLinkedList{
+import java.util.Random;
+
+class SLinkedList{
 
 public Node head = null;
 public Node tail = null;
@@ -12,7 +14,7 @@ class Node{
   }
 }
 
-public addNode(int data){
+public void addNode(int data){
   Node newNode = new Node(data);
     if(head == null){
       head = newNode;
@@ -20,31 +22,33 @@ public addNode(int data){
       tail.next = newNode;
     }
     tail = newNode;
-    System.out.println("New node inserted ..");
+    System.out.println("New node inserted..");
 }
 
-public display(){
-  Node temp;
+public void display(){
+  Node tmp;
   if(head == null){
     System.out.println("List is empty.");
     return;
   }
-  temp = head;
-  while(temp!=null){
-    System.out.println("Element is : " + temp.data){
-      temp = temp.next;
-    }
+  tmp = head;
+  while(tmp!=null){
+    System.out.println("Element is : " + tmp.data);
+      tmp = tmp.next;
   }
 }
 }
 
-public class mainClass{
+class mainClass{
   public static void main(String[] args){
     int i=0;
-    SlinkedList sl = new SlinkedList();
+    Random random = new Random();
+    SLinkedList sl = new SLinkedList();
     while(i < 100){
-    sl.addNode(i);
+    sl.addNode(random.nextInt(150));
     i++;
-  }
+    }
+    sl.display();
+
   }
 }

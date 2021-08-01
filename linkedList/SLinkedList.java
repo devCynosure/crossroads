@@ -32,7 +32,7 @@ public display(){
   temp = head;
   while(temp!=null){
     System.out.println("Element is : " + temp.data){
-      
+      temp = temp.next;
     }
   }
 }
